@@ -19,11 +19,12 @@ can be found in the db/seeds.rb file.
 
 **Users can add comments to a posts**
     
-    Given I am a logged in user
+    Given there is an existing post
+    And I am a logged in user
     When I to the homepage (the wall)
-    I should see an "Add Comment" link
+    Then I should see an "Add Comment" link
     When I click "Add Comment" I should see the new comment form
-    When I fill in a comment
+    And I fill in a comment
     And I press "Add Comment"
     Then I should be redirected back to the homepage (the wall)
     And I should see the comment beneath the post
