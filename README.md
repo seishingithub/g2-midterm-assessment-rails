@@ -12,6 +12,9 @@ You can run specs with:
 
 * `rspec`
 
+Note: email/password combinations for existing users populated by `rake db:seed`
+can be found in the db/seeds.rb file.
+
 ## Story
 
 **Users can add comments to a posts**
