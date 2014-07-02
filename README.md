@@ -18,7 +18,8 @@ can be found in the db/seeds.rb file.
 ## Story
 
 **Users can add comments to a posts**
-
+    
+    Given I am a logged in user
     When I to the homepage (the wall)
     I should see an "Add Comment" link
     When I click "Add Comment" I should see the new comment form
