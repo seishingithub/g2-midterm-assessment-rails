@@ -4,7 +4,7 @@ require 'capybara/rails'
 feature 'Auth' do
 
   scenario 'Users can login and out' do
-    User.create!(email: 'user@example.com', password: 'password', password_confirmation: 'password')
+    create_user email: "user@example.com"
 
     visit root_path
     click_on "Login"

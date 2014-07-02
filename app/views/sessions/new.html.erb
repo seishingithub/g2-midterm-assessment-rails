@@ -1,12 +1,18 @@
-<%= form_for @user, url: signin_path do |f| %>
+<%= form_for @user, url: signin_path, html: { class: "signin-form" } do |f| %>
   <% f.object.errors.full_messages.each do |error| %>
-    <div>
+    <div class="errors">
       <%= error %>
     </div>
   <% end %>
-  <%= f.label :email %>
-  <%= f.email_field :email %>
-  <%= f.label :password %>
-  <%= f.password_field :password %>
-  <%= f.submit "Login" %>
+  <div>
+    <%= f.label :email %>
+    <%= f.email_field :email, autofocus: true %>
+  </div>
+  <div>
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+  </div>
+  <div>
+    <%= f.submit "Login" %>
+  </div>
 <% end %>

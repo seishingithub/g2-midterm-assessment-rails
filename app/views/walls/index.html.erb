@@ -1,1 +1,16 @@
 <h1>Your Wall</h1>
+
+<%= form_for @post, html: { class: "post-form" } do |f| %>
+  <%= f.text_area :body, autofocus: true, placeholder: "What are you doing now?" %>
+  <%= f.submit "Post" %>
+<% end %>
+
+<% @posts.each do |post| %>
+
+  <div class="post">
+    <div class="time"><%= time_ago_in_words(post.created_at) + " ago" %></div>
+    <div class="author"><%= post.user.name %> said...</div>
+    <span class="body"><%= post.body %></span>
+  </div>
+
+<% end %>
