@@ -21,7 +21,7 @@ can be found in the db/seeds.rb file.
     
     Given there is an existing post
     And I am a logged in user
-    When I to the homepage (the wall)
+    When I go to the homepage (the wall)
     Then I should see an "Add Comment" link
     When I click "Add Comment" I should see the new comment form
     And I fill in a comment
