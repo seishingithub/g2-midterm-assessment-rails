@@ -31,7 +31,7 @@ NOTES:
 
 1. The path for the new comment form must match the path in the wireframes
 1. On the comment form, the button should align with the right edge of the comment box, like the wireframes
-1. On the wall page, all comments should be indented, and each should be in a light-gray box with a slightly lighter border as shown in the wireframes
+1. On the wall page, all comments should be indented, and each should be in a box with a light-gray background, and a border that is a slightly darker gray, as shown in the wireframes
 1. Times should be relative, as show in the wireframes
 
 **Users must enter a comment body**
