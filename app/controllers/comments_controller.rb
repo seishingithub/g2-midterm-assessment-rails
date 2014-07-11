@@ -2,7 +2,7 @@ class Comments < ApplicationController
 
 
   def new
-    @post = Post.find params[:post_id]
+    @post = Post.find params[:post.id]
     @comment = Comment.new
   end
 

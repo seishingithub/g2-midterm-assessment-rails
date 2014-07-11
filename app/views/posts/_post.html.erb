@@ -3,3 +3,5 @@
   <div class="author"><%= post.user.name %> said...</div>
   <span class="body"><%= post.body %></span>
 </div>
+
+<h2><%= link_to 'Add Comment', new_post_comment_path(post.id) %></h2>

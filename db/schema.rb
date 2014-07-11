@@ -11,28 +11,27 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140707170752) do
+ActiveRecord::Schema.define(version: 20140711195346) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "comments", force: true do |t|
-    t.text     "comments"
-    t.integer  "comment_id"
+    t.integer  "user_id"
+    t.integer  "post_id"
+    t.text     "body"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "comments", ["comment_id"], name: "index_comments_on_comment_id", using: :btree
-
   create_table "posts", force: true do |t|
-    t.integer  "post_id",    null: false
+    t.integer  "user_id",    null: false
     t.text     "body",       null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "posts", ["post_id"], name: "index_posts_on_post_id", using: :btree
+  add_index "posts", ["user_id"], name: "index_posts_on_user_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string "name",            null: false
