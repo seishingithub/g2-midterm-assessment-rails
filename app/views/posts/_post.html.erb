@@ -3,3 +3,11 @@
   <div class="author"><%= post.user.name %> said...</div>
   <span class="body"><%= post.body %></span>
 </div>
+<div class="comments">
+  <% post.comments.each do |comment| %>
+    <div class="comment_body"><%= comment.body %></div>
+  <% end %>
+</div>
+
+<h2><%= link_to 'Add Comment', new_post_comment_path(post, @comment) %></h2>
+
